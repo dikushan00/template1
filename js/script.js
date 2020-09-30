@@ -10,31 +10,27 @@ $(window).scroll(function () {
         $('.swipe_btn').css({
             "display": "block"
         });
-        //        $('.swipe_btn').animate({
-        //            opacity: 0.3
-        //        }, 1000);
     } else {
         $('.swipe_btn').css({
             "display": "none"
         });
     }
 
-    if (st > 40) {
-        $(".header").addClass("fixed");
-        $(".home").css("margin-top", "60px");
-        $(".header").animate({
-            height: 60
-        }, {
-            duration: 500,
-            delay: 10
-        });
-    } else {
-        console.log("height 90");
-        $(".header").removeClass("fixed");
-        $(".header").animate({
-            height: 90
-        }, 500);
-    }
+    // if (st > 40) {
+    //     $(".header").addClass("fixed");
+    //     $(".home").css("margin-top", "60px");
+    //     $(".header").animate({
+    //         height: 60
+    //     }, {
+    //         duration: 500,
+    //         delay: 10
+    //     });
+    // } else {
+    //     $(".header").removeClass("fixed");
+    //     $(".header").animate({
+    //         height: 90
+    //     }, 500);
+    // }
 });
 
 $('.swipe_btn').click(function () {
@@ -90,11 +86,6 @@ $('a[href*="#"]').on('click', function (e) {
     }, 1200);
 });
 
-$('a[href*="#"]').on('click', function (e) {
-    console.log($($(this).attr('href')).offset().top);
-    console.log($(this).attr('href'));
-});
-
 $(".home_slider").slick({
     dots: true,
     infinite: true,
@@ -105,39 +96,3 @@ $(".home_slider").slick({
     autoplay: true,
     autoplaySpeed: 3000
 });
-
-//window.onscroll = (function showHeader() {
-//    var st = window.pageYOffset;
-//    console.log(st);
-//
-//    if (st > 100) {
-//        document.querySelector(".header").classList.add("fixed");
-//        document.getElementById("header").animate([
-//  // keyframes
-//            {
-//                height: '90'
-//            },
-//            {
-//                height: '60'
-//            }
-//], {
-//            // timing options
-//            duration: 1000,
-//            iterations: Infinity
-//        })
-//        //        document.getElementById("header").animate([
-//        //            {
-//        //                height: 90
-//        //            },
-//        //            {
-//        //                height: 60
-//        //            }
-//        //        ], {
-//        //            duration: 1000,
-//        //            iterations: Infinity
-//        //        });
-//
-//    } else {
-//        document.getElementById("header").classList.remove("fixed");
-//    }
-//});

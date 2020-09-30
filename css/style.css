@@ -90,7 +90,7 @@ a {
 }
 
 .header.fixed {
-    box-shadow: 0 2px 6px 0px #ccc;
+    box-shadow: 0 2px 6px 0 #ccc;
     animation: header_ani ease;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
@@ -122,7 +122,7 @@ a {
     content: '';
     background: #ffbb42;
     height: 2px;
-    width: 0%;
+    width: 0;
     left: auto;
     right: 0;
     bottom: 0;
@@ -143,6 +143,21 @@ a {
     transition: all 500ms ease;
 }
 
+nav > input {
+    display: none;
+}
+
+.toggleMenu {
+    display: none;
+    height: inherit;
+    position: relative;
+    cursor: pointer;
+    padding: 6px 40px;
+    font-size: 21px;
+    color: #709dca;
+    background-color: @menu_color;
+}
+
 .home {
     height: 590px;
     background-color: #709dca;
@@ -155,7 +170,6 @@ a {
     font-size: 35px;
     color: #ffffff;
     text-transform: uppercase;
-    line-height: 0.686;
     text-align: center;
     font-family: 'Muli', sans-serif;
 }
@@ -163,7 +177,6 @@ a {
 .home_title_desc {
     color: #ffffff;
     text-transform: uppercase;
-    line-height: 0.686;
     text-align: center;
     font-family: 'Lato', sans-serif;
     margin-top: 15px;
@@ -186,7 +199,7 @@ a {
     border-radius: 2px;
     outline: none;
     border: 0;
-    box-shadow: 0;
+    box-shadow: none;
 }
 
 .home_form_input_label {
@@ -263,7 +276,6 @@ a {
 }
 
 .services {
-    height: 780px;
     padding: 110px 0;
 }
 
@@ -281,7 +293,6 @@ a {
 
 .services_title {
     margin: 0;
-    margin-top: 0;
 }
 
 .services_item {
@@ -307,8 +318,7 @@ a {
 }
 
 .services_item_desc {
-    margin: 0;
-    margin-top: 5px;
+    margin: 5px 0 0;
     color: #a6a6a6;
 }
 
@@ -343,7 +353,6 @@ a {
     font-family: 'Muli', sans-serif;
     color: #394b50;
     text-transform: uppercase;
-    line-height: 0.733;
     text-align: center;
     margin-top: 100px;
 }
@@ -354,7 +363,6 @@ a {
     font-family: 'Lato', sans-serif;
     color: #394b50;
     text-transform: uppercase;
-    line-height: 0.733;
     text-align: center;
     margin-top: 15px;
 }
@@ -371,10 +379,12 @@ a {
 }
 
 .aboutUs_content {
-    width: 400px;
-    height: 100%;
-    float: right;
-    margin-top: 166px;
+    width: 50%;
+    height: 623px;
+    position: absolute;
+    right: 0;
+    padding: 5px 25px;
+    background-color: #ffbb42;
 }
 
 .aboutUs_img {
@@ -385,12 +395,15 @@ a {
 .aboutUs_title {
     font-size: 30px;
     color: #fff;
+    margin-top: 170px;
 }
 
 .aboutUs_desc {
     color: #fff;
     margin-top: 15px;
     opacity: 0.8;
+    width: 400px;
+    font-size: 17px;
 }
 
 .aboutUs_btn {
@@ -476,9 +489,8 @@ a {
     color: #ffbb42;
     text-transform: uppercase;
     line-height: 0.367;
-    margin: 0 auto;
     text-align: center;
-    margin-top: 35px;
+    margin: 35px auto 0;
 }
 
 .price_per span {
@@ -519,11 +531,10 @@ a {
 }
 
 .price .provide_item {
-    font-size: 13.5px;
+    font-size: 13px;
     font-family: 'Lato', sans-serif;
     color: #b5bbc1;
     text-transform: uppercase;
-    line-height: 2.963;
     text-align: center;
     line-height: 2;
 }
@@ -537,8 +548,7 @@ a {
     width: 134px;
     font-size: 14px;
     font-family: 'Lato', sans-serif;
-    margin: 0 auto;
-    margin-top: 35px;
+    margin: 35px auto 0;
     padding: 15px 22px;
     color: #fff;
     background-color: #ffbb42;
@@ -549,7 +559,6 @@ a {
 }
 
 .howItWork {
-    height: 753px;
     padding: 110px 0;
 }
 
@@ -566,7 +575,9 @@ a {
 }
 
 .howItWork .arrow {
-    top: 50px;
+    position: absolute;
+    left: 80%;
+    top: 0;
 }
 
 .howItWork .arrow_first,
@@ -588,6 +599,7 @@ a {
 }
 
 .howItWork_content_item {
+    position: relative;
     width: 25%;
     padding: 15px 42px;
 }
@@ -719,7 +731,6 @@ a {
 }
 
 .contactUs {
-    height: 905px;
     padding: 110px 0 0;
 }
 
@@ -733,8 +744,14 @@ a {
 }
 
 .contactUs_form {
+    display: flex;
+    justify-content: center;
     text-align: center;
     margin-top: 40px;
+}
+
+.contactUs_form .main_btn {
+    margin: 0;
 }
 
 .contactUs_form input {
@@ -746,7 +763,6 @@ a {
     line-height: 45px;
     text-align: center;
     left: 42px;
-    top: 15px;
     position: relative;
     z-index: 1;
     opacity: 0.5;
@@ -810,8 +826,7 @@ a {
 }
 
 .contactUs_address_text p {
-    margin: 0;
-    margin-top: 10px;
+    margin: 10px 0 0;
 }
 
 .footer {
@@ -829,9 +844,9 @@ a {
 }
 
 .footer_menu {
-    width: 69%;
-    margin: 0 auto;
-    margin-top: 67px;
+    width: 100%;
+    justify-content: center;
+    margin: 67px auto 0;
 }
 
 .footer_menu a {
@@ -844,19 +859,17 @@ a {
     color: #394b50;
     line-height: 1.072;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 30px auto 0;
 }
 
 .footer .soc_net {
-    margin: 0 auto;
-    margin-top: 22px;
+    margin: 22px auto 0;
     display: flex;
     justify-content: center;
 }
 
 .footer .soc_net a {
-    font-size: 17.584px;
+    font-size: 17.5px;
     color: #709dca;
     line-height: 1.365;
     text-align: center;
@@ -891,5 +904,334 @@ a {
 
     50% {
         transform: translate(0, 2px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+
+    .home_form .home_form_label {
+        left: -115px;
+        top: 15px;
+    }
+
+    .home_laptop_img,
+    .home_slider{
+        padding: 14px;
+        position: initial;
+        display: none;
+        margin: 140px auto 0;
+        left: initial;
+        top: initial;
+    }
+
+    .home_form form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home_form_btn {
+        margin-top: 20px;
+    }
+
+    .slick-dots {
+        bottom: 0 !important;
+        top: 285px;
+    }
+
+    .services {
+        margin-top: 135px;
+    }
+
+    .services_item {
+        width: 400px;
+    }
+
+    .services_area {
+        padding-right: 15px;
+    }
+
+    .clients {
+        height: auto;
+    }
+
+    .clients_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clients_content_item:nth-child(2n) {
+        margin-left: 0;
+    }
+
+    .howItWork .arrow {
+        width: 115px;
+    }
+
+    .home .home_form_input {
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main_menu_item a {
+        padding: 5px 8px;
+    }
+
+    .services_items {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .price {
+        height: 1660px;
+    }
+
+    .price_content {
+        flex-direction: column;
+    }
+
+    .aboutUs_content {
+        width: 60%;
+    }
+    .aboutUs_img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .howItWork .arrow {
+        left: 77%;
+        width: 100px;
+    }
+
+    .contactUs_form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactUs_form .main_btn {
+        margin-top: 25px;
+    }
+
+    .contactUs_form .home_form_label {
+        left: -113px;
+        top: 15px;
+    }
+
+    .home_form_input {
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .aboutUs_content {
+        width: 75%;
+    }
+
+    .howItWork .arrow {
+        display: none;
+    }
+
+    .howItWork_content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .howItWork_content_item {
+        width: 49%;
+    }
+
+    .home {
+        height: 640px;
+    }
+
+    .main_menu {
+        width: 100%;
+        display: none;
+    }
+
+    .input[type="checkbox"] {
+        position: relative;
+    }
+
+    label .fa-bars {
+        position: absolute;
+        top: 8px;
+        left: 92px;
+        font-size: 20px;
+        color: #709dca;
+    }
+
+    .toggleMenu {
+        display: block;
+    }
+
+    input[type="checkbox"]:checked + .toggleMenu {
+        display: block;
+    }
+
+    input[type="checkbox"]:checked ~ .main_menu {
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        width: 100%;
+        background-color: #fff;
+        left: 0;
+        top: 90px;
+        padding: 10px 35px;
+    }
+
+    .main_menu > li {
+        border-bottom: 1px solid #ccc;
+        padding-left: 8px;
+    }
+
+    .main_menu_item a {
+        display: block;
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        line-height: 3;
+        padding: 0;
+    }
+
+    .clients_content_item {
+        height: auto;
+        width: 100% !important;
+    }
+
+    .clients_img {
+        width: 90px;
+    }
+
+    .footer {
+        height: 185px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .aboutUs_content {
+        width: 100%;
+    }
+    .aboutUs_img {
+        display: none;
+    }
+
+    .aboutUs_desc {
+        width: auto;
+    }
+
+    .content_item_text {
+        width: 100% !important;
+    }
+
+    .clients_img {
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    .comment {
+        font-size: 14px;
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .client {
+        text-align: center;
+    }
+
+    .clients_content_item svg {
+        display: none;
+    }
+
+    .clients_content_item .svg2 {
+        right: 25px !important; 
+        left: auto;
+        top: 115px;
+    }
+    
+    .clients .content_item_text {
+        margin: 0;
+    }
+
+    .home {
+        height: 690px;
+    }
+
+    .home_slider {
+        width: 100%;
+    }
+
+    .services_area {
+        padding: 0;
+    }
+
+    .services_items {
+        padding: 0;
+    }
+
+    .services_item {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .services_content {
+        margin: 15px 0;
+    }
+
+    .services_item_image {
+        width: auto;
+    }
+
+    .services_item_title,
+    .services_item_desc {
+        text-align: center;
+    }
+
+    .services_item_sixth .services_content {
+        margin-left: 0;
+    }
+    
+    .aboutUs_btn {
+        margin: 25px auto 0;
+    }
+
+    .price_content_item {
+        width: 100% !important;
+    }
+
+    .howItWork_content_item {
+        width: 100%;
+    }
+
+    .howItWork .content_text {
+        margin-top: 30px;
+    }
+
+    .clients_content_item .comment {
+        height: auto;
+    }
+
+    .footer .podval {
+        height: 60px;
+        flex-wrap: wrap;
+        padding: 5px 15px;
+    }
+}
+
+@media (max-width: 330px) {
+
+    .home {
+        height: 730px;
     }
 }

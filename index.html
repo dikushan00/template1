@@ -23,6 +23,8 @@
         <div class="container header_container">
             <a href="#" class="header_logo"><img src="./img/logo.png" alt="LOGO" class="header_logo_img"></a>
             <nav>
+                <input type="checkbox" name="menu" id="menu_toggle" class="toggleMenuInput">
+                <label for="menu_toggle" class="toggleMenu">Menu <i class="fas fa-bars"></i></label>
                 <ul class="main_menu">
                     <li class="main_menu_item active"><a href="#home">HOME</a></li>
                     <li class="main_menu_item"><a href="#services">SERVICE</a></li>
@@ -43,10 +45,10 @@
             <div class="home_form">
                 <form action="#">
                     <i class="fas fa-user home_form_label"></i>
-                    <input type="text" class="main_input home_form_input home_form_name" id="home_form_name" placeholder="Full Name">
+                    <input type="text" class="main_input home_form_input home_form_name" id="home_form_name_first" placeholder="Full Name">
 
                     <i class="fas fa-envelope home_form_label"></i>
-                    <input type="email" class="main_input home_form_input home_form_email" id="home_form_email" placeholder="Email Address">
+                    <input type="email" class="main_input home_form_input home_form_email" id="home_form_email_first" placeholder="Email Address">
 
                     <i class="fas fa-phone-alt home_form_label"></i>
                     <input type="text" class="main_input home_form_input home_form_name" id="home_form_phone" placeholder="Phone Number">
@@ -78,7 +80,7 @@
 
             <div class="services_area">
                 <ul class="services_items">
-                    <li class="services_item" data-aos="fade-right">
+                    <li class="services_item" data-aos="fade-down">
                         <div class="services_item_image">
                             <img src="./img/s1.png" alt="HOTO" class="services_item_img">
                         </div>
@@ -87,7 +89,7 @@
                             <p class="services_item_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium eum atque quod minima sit distinctio repudiandae accusamus quaerat rem. Inventore incidunt molestias fuga ex molestiae?</p>
                         </div>
                     </li>
-                    <li class="services_item" data-aos="fade-left">
+                    <li class="services_item" data-aos="fade-up">
                         <div class="services_item_image">
                             <img src="./img/s4.png" alt="HOTO" class="services_item_img">
                         </div>
@@ -96,7 +98,7 @@
                             <p class="services_item_desc">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
                         </div>
                     </li>
-                    <li class="services_item services_item_second" data-aos="fade-right">
+                    <li class="services_item services_item_second" data-aos="fade-down">
                         <div class="services_item_image">
                             <img src="./img/s2.png" alt="HOTO" class="services_item_img">
                         </div>
@@ -105,7 +107,7 @@
                             <p class="services_item_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium eum atque quod minima sit distinctio repudiandae accusamus quaerat rem. Inventore incidunt molestias fuga ex molestiae?</p>
                         </div>
                     </li>
-                    <li class="services_item" data-aos="fade-left">
+                    <li class="services_item" data-aos="fade-up">
                         <div class="services_item_image">
                             <img src="./img/s5.png" alt="HOTO" class="services_item_img">
                         </div>
@@ -116,7 +118,7 @@
                                 If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything</p>
                         </div>
                     </li>
-                    <li class="services_item" data-aos="fade-right">
+                    <li class="services_item" data-aos="fade-down">
                         <div class="services_item_image">
                             <img src="./img/s3.png" alt="HOTO" class="services_item_img">
                         </div>
@@ -125,7 +127,7 @@
                             <p class="services_item_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium eum atque quod minima sit distinctio repudiandae accusamus quaerat rem. Inventore incidunt molestias fuga ex molestiae?</p>
                         </div>
                     </li>
-                    <li class="services_item services_item_sixth " data-aos="fade-left">
+                    <li class="services_item services_item_sixth " data-aos="fade-up">
                         <div class="services_item_image">
                             <img src="./img/s6.png" alt="HOTO" class="services_item_img">
                         </div>
@@ -208,36 +210,34 @@
             <h3 class="reg_title howItWork_title">HOW IT WORKS</h3>
             <p class="reg_title_desc howItWork_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <div class="howItWork_content">
-                <div class="arrows">
-                    <img src="./img/arrow2.png" alt="PHOTO" class="arrow arrow_first">
-                    <img src="./img/arrow.png" alt="PHOTO" class="arrow arrow_second">
-                    <img src="./img/arrow2.png" alt="PHOTO" class="arrow arrow_third">
-                </div>
                 <div class="howItWork_content_item" data-aos="fade-down" data-aos-delay="0">
                     <img src="./img/st1.png" alt="PHOTO" class="content_img">
                     <div class="content_text">
                         <h4 class="content_title">STEP 1</h4>
                         <p class="content_title_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt perferendis autem beatae delectus vel</p>
                     </div>
+                    <img src="./img/arrow2.png" alt="PHOTO" class="arrow arrow_first">
                 </div>
                 <div class="howItWork_content_item" data-aos="fade-up" data-aos-delay="300">
                     <img src="./img/st2.png" alt="PHOTO" class="content_img">
                     <div class="content_text">
-                        <h4 class="content_title">STEP 1</h4>
+                        <h4 class="content_title">STEP 2</h4>
                         <p class="content_title_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt perferendis autem beatae delectus vel</p>
                     </div>
+                    <img src="./img/arrow.png" alt="PHOTO" class="arrow arrow_second">
                 </div>
                 <div class="howItWork_content_item" data-aos="fade-down" data-aos-delay="600">
                     <img src="./img/st3.png" alt="PHOTO" class="content_img">
                     <div class="content_text">
-                        <h4 class="content_title">STEP 1</h4>
+                        <h4 class="content_title">STEP 3</h4>
                         <p class="content_title_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt perferendis autem beatae delectus vel</p>
                     </div>
+                    <img src="./img/arrow2.png" alt="PHOTO" class="arrow arrow_third">
                 </div>
                 <div class="howItWork_content_item" data-aos="fade-up" data-aos-delay="900">
                     <img src="./img/st4.png" alt="PHOTO" class="content_img">
                     <div class="content_text">
-                        <h4 class="content_title">STEP 1</h4>
+                        <h4 class="content_title">STEP 4</h4>
                         <p class="content_title_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt perferendis autem beatae delectus vel</p>
                     </div>
                 </div>
@@ -251,7 +251,7 @@
             <h3 class="reg_title clients_title white">Happy Clients</h3>
             <p class="reg_title_desc clients_desc"> We are explain who is using our business solution</p>
             <div class="clients_content">
-                <div class="clients_content_item" data-aos="fade-down-right">
+                <div class="clients_content_item" data-aos="flip-up">
                     <img src="./img/c1.png" alt="" class="clients_img">
                     <div class="content_item_text">
                         <p class="comment">
@@ -267,7 +267,7 @@
                         <p class="client"><span class="name">Darwin Michle, </span>Project manager</p>
                     </div>
                 </div>
-                <div class="clients_content_item" data-aos="fade-down-left">
+                <div class="clients_content_item" data-aos="flip-down">
                     <img src="./img/c2.png" alt="" class="clients_img">
                     <div class="content_item_text">
                         <p class="comment">
@@ -283,7 +283,7 @@
                         <p class="client"><span class="name">Madam Elisabath, </span>Creative Director</p>
                     </div>
                 </div>
-                <div class="clients_content_item" data-aos="fade-up-right">
+                <div class="clients_content_item" data-aos="flip-up">
                     <img src="./img/c3.png" alt="" class="clients_img">
                     <div class="content_item_text">
                         <p class="comment">
@@ -299,7 +299,7 @@
                         <p class="client"><span class="name">Clips arter, </span>Lipsum directer</p>
                     </div>
                 </div>
-                <div class="clients_content_item" data-aos="fade-up-left">
+                <div class="clients_content_item" data-aos="flip-down">
                     <img src="./img/c4.png" alt="" class="clients_img">
                     <div class="content_item_text">
                         <p class="comment">
@@ -327,10 +327,10 @@
             <div class="contactUs_content">
                 <form action="#" class="contactUs_form">
                     <i class="fas fa-user home_form_label"></i>
-                    <input type="text" class="main_input home_form_input home_form_name contactUs_form_name" id="home_form_name" placeholder="Full Name">
+                    <input type="text" class="main_input home_form_input home_form_name contactUs_form_name" id="home_form_name_second" placeholder="Full Name">
 
                     <i class="fas fa-envelope home_form_label"></i>
-                    <input type="email" class="main_input home_form_input home_form_email contactUs_form_email" id="home_form_email" placeholder="Email Address">
+                    <input type="email" class="main_input home_form_input home_form_email contactUs_form_email" id="home_form_email_second" placeholder="Email Address">
                     <button class="main_btn home_form_btn">REQUEST A QUOTE</button>
                 </form>
                 <div class="contactUs_address_area">
